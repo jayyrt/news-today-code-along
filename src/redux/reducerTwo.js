@@ -23,16 +23,17 @@ export const setLoading = (bool) => {
 
 const reducer = (state = initialState, action) => {
     switch(action.type){
-        case GET_CHARACTERS: {
+        case `${GET_CHARACTERS}_FULFILLED`: {
             return {
                 ...state,
                 characters: action.payload,
+                loading: false,
             }
         }
-        case SET_LOADING: {
+        case `${GET_CHARACTERS}_PENDING`: {
             return {
                 ...state,
-                loading: action.payload,
+                loading: true,
             }
         }
         default: return state;

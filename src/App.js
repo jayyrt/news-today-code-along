@@ -38,11 +38,9 @@ class App extends Component {
           <button onClick={this.props.decrement}>Decrement</button>
           <input onChange={(e) => this.setState({ countInput: e.target.value })}/>
     <button onClick={() => this.props.changeNum(this.state.countInput)}>Change Count</button>*/}
-    {/*
       this.props.loading 
       ? <h1>loading...</h1> 
       : (<ul>{this.props.characters.map(char => <li>{char.name}</li>)}</ul>)
-    */}
     <button onClick={this.props.getCharacters}>get characters</button>
           <Switch>
             <Route path='/hacker-news' component={HackerNews} />
