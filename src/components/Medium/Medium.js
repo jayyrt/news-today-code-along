@@ -19,13 +19,14 @@ class Medium extends Component {
   }
 }
 
-const mapStateToProps = (reduxState) => {
+const mapStateToProps = ({ count, name }) => {
   return {
-    count: reduxState.count,
+    count,
+    name,
   }
 }
 
-export default connect()(Medium);
+export default connect(mapStateToProps)(Medium);
 
 const styles = {
   logo: { width: '250px' }
