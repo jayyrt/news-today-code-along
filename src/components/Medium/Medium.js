@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './../shared/Card/Card';
 import Loading from './../shared/Loading/Loading';
+import { connect } from 'react-redux';
 
 class Medium extends Component {
   constructor(props) {
@@ -18,7 +19,13 @@ class Medium extends Component {
   }
 }
 
-export default Medium;
+const mapStateToProps = (reduxState) => {
+  return {
+    count: reduxState.count,
+  }
+}
+
+export default connect()(Medium);
 
 const styles = {
   logo: { width: '250px' }

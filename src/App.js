@@ -10,9 +10,11 @@ import './App.css';
 import e from 'express';
 
 class App extends Component {
-    state = {
+  constructor(){
+    this.state = {
       countInput: 0,
     }
+  }
   
   render() {
     return (
